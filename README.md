@@ -1,6 +1,6 @@
 # Fixed 8x16
 
-An 8×16 bitmap terminal font in BDF, covering 4,787 characters of Unicode's
+An 8×16 bitmap terminal font in BDF, covering 4,791 characters of Unicode's
 Basic Multilingual Plane. It is X11's `misc-fixed` 9x15 redrawn for 8-pixel
 cells, with a line more above the capitals so that accents never squash the
 letter under them.
@@ -38,21 +38,31 @@ Each glyph comes from the first of these that has it:
 | Drawn for the cell | 160 | All of box drawing and block elements, U+2500–U+259F |
 | The terminal's font | 1,145 | ASCII, Latin, Greek, Cyrillic, Hebrew, symbols, Braille, as the terminal shows them |
 | Stacked | 157 | Letters with marks the terminal cannot show, on its own unsquashed letters |
-| 9x15 | 3,321 | Everything else 9x15 has, made 8 wide |
+| Persian | 6 | ی and ژ, which 9x15 lacks, and their forms, from 9x15's letters |
+| 9x15 | 3,319 | Everything else 9x15 has, made 8 wide |
 | The terminal's aliases | 4 | Characters 9x15 lacks, drawn as a lookalike |
 
 ## Coverage
 
-Everything in 9x15 is here, and 11 characters more. Only two of them are
+Everything in 9x15 is here, and 15 characters more. Four of them are
 letters a language needs:
 
 - **ӏ**, the small palochka, in the alphabets of Adyghe, Chechen and
   Kabardian (CLDR's exemplar letters). 9x15 has only the capital Ӏ.
 - **Ʌ**, the capital of ʌ, for Mohawk. 9x15 has only the small ʌ.
+- **ی and ژ**, the two letters of the Persian alphabet that 9x15 lacks,
+  with ژ's isolated and final forms. ی is drawn as ى, and ژ is ز with ش's
+  three dots. 9x15's isolated and final ی, U+FBFC and U+FBFD, have the two
+  dots that Persian's ی has only at the start and in the middle of a word;
+  here they have none.
 
 The rest are ȷ (dotless j), 〈 〉, and ⏵ ⏸ ⏺ ⚠ ❯ ⧉. Every other language
 reads in this font only where it reads in 9x15. What differs is how its
 letters look, below.
+
+The other languages written in the Arabic script - Urdu, Pashto, Sindhi,
+Sorani Kurdish, Uyghur, Kashmiri - still lack letters (ٹ ڈ ڑ ں ہ ے, ځ څ
+ډ ښ ګ ڼ, ڻ ڳ ڪ, ڕ ڵ ێ ۆ, ۇ ۈ ۋ ڭ ...), as they do in 9x15.
 
 ## Features
 
@@ -90,7 +100,7 @@ letters look, below.
 ## Limitations
 
 - **9x15's glyphs are cut to 8 columns.** A blank column goes, or failing
-  that one the same as its neighbour, usually the middle of a stroke. 360
+  that one the same as its neighbour, usually the middle of a stroke. 361
   glyphs that have ink in every column lose their right-hand one instead, so
   they are cramped or clipped: mostly Ethiopic, Arabic, circled and
   parenthesised numbers and letters (① ⑴ Ⓐ), Greek capitals with breathing
