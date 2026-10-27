@@ -41,6 +41,19 @@ Each glyph comes from the first of these that has it:
 | 9x15 | 3,321 | Everything else 9x15 has, made 8 wide |
 | The terminal's aliases | 4 | Characters 9x15 lacks, drawn as a lookalike |
 
+## Coverage
+
+Everything in 9x15 is here, and 11 characters more. Only two of them are
+letters a language needs:
+
+- **ӏ**, the small palochka, in the alphabets of Adyghe, Chechen and
+  Kabardian (CLDR's exemplar letters). 9x15 has only the capital Ӏ.
+- **Ʌ**, the capital of ʌ, for Mohawk. 9x15 has only the small ʌ.
+
+The rest are ȷ (dotless j), 〈 〉, and ⏵ ⏸ ⏺ ⚠ ❯ ⧉. Every other language
+reads in this font only where it reads in 9x15. What differs is how its
+letters look, below.
+
 ## Features
 
 - **Accented capitals at full height.** Á Ö Ç Ş Ő Ů, and the Greek and Cyrillic
